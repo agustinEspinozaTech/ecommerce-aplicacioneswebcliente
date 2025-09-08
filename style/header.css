@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+#encabezado {
+    background: #fff;
+    color: #111318;
+    border-bottom: 1px solid #e6e8ec;
+    font-family: "Work Sans", Arial, sans-serif;
+}
+
+#encabezado .marca {
+    margin: 0;
+    padding: 16px 16px 0;
+    font-size: 20px;
+    font-family: "Work Sans" Arial, sans-serif;
+}
+
+#encabezado>div {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 8px 16px 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+#navegacionPrincipal {
+    flex: 1 1 auto;
+    min-width: 260px;
+}
+
+#navegacionPrincipal .menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+#navegacionPrincipal .menu::-webkit-scrollbar {
+    display: none;
+}
+
+#navegacionPrincipal .itemMenu {
+    flex: 0 0 auto;
+}
+
+#navegacionPrincipal .enlaceMenu {
+    display: inline-block;
+    padding: 10px 0;
+    color: #545b66;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    font-family: "Work Sans", Arial, sans-serif;
+}
+
+#navegacionPrincipal .enlaceMenu:hover {
+    color: #111318;
+    border-color: #e6e8ec;
+    transform: translateY(-1px);
+}
+
+
+
+#navegacionCarrito {
+    flex: 0 0 auto;
+}
+
+#carrito {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    border: 1px solid #e6e8ec;
+    border-radius: 500px;
+    background: #f7f9fc;
+    color: #111318;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: "Work Sans", Arial, sans-serif;
+}
+
+#navegacionCarrito #carrito:hover {
+    background: #eef2f7;
+    box-shadow: 0 6px 18px rgba(16, 24, 40, .06);
+    transform: translateY(-1px);
+}
+
+
+@media (min-width:768px) {
+    #encabezado .marca {
+        padding: 16px 16px 0;
+    }
+
+    #encabezado>div {
+        padding: 8px 16px 20px;
+    }
+
+    #navegacionPrincipal .menu {
+        gap: 28px;
+    }
+}

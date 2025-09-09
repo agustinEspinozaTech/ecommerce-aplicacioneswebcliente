@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+#contenido {
+    font-family: "Work Sans", Arial, sans-serif;
+    background: #fff;
+    color: #111318;
+}
+
+#contenido .destacados {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 16px;
+}
+
+#contenido .destacados h2 {
+    margin: 0 0 4px 0;
+    font-size: 24px;
+    text-align: center;
+}
+
+#contenido .destacados p {
+    margin: 0;
+    color: #545b66;
+    font-size: 14px;
+    text-align: center;
+
+}
+
+#contenido .listaProductos {
+    margin: 16px 0 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+#contenido .producto {
+    border: 1px solid #e6e8ec;
+    border-radius: 12px;
+    background: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#contenido .producto figure {
+    margin: 0;
+    background: #f7f9fc;
+    aspect-ratio: 1/1;
+    display: block;
+}
+
+#contenido .producto img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    padding: 12px;
+}
+
+#contenido .producto>div {
+    padding: 12px 12px 14px;
+    display: grid;
+    gap: 8px;
+}
+
+#contenido .producto h3 {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+#contenido .precio {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+#contenido .acciones {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+#contenido .acciones a {
+    text-decoration: none;
+    color: #111318;
+    border: 1px solid #e6e8ec;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+#contenido .acciones a:hover {
+    background: #eef2f7;
+    transform: translateY(-1px);
+}
+
+#contenido .acciones button {
+    border: 0;
+    border-radius: 8px;
+    padding: 10px 14px;
+    background: #aaadb1;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+}
+
+#contenido .acciones button:hover {
+    background: #a6b6c6;
+    transform: translateY(-1px);
+}
+
+
+
+@media (min-width:600px) {
+    #contenido .listaProductos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+}
+
+@media (min-width:900px) {
+    #contenido .listaProductos {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (min-width:1200px) {
+    #contenido .listaProductos {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+}

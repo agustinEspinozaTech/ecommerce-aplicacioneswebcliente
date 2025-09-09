@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecommerce</title>
     <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/main.css">
 </head>
 
 <body>
@@ -30,25 +31,25 @@
             </nav>
         </div>
     </header>
-    <main>
-        <div>
+    <main id="contenido">
+        <div class="destacados">
             <div> 
                 <h2>Productos destacados</h2>
                 <p>¡Los productos más vistos de la semana!</p>
             </div>
 
-              <ul>
+              <ul class="listaProductos">
                 <li>
-                    <article>
+                    <article class="producto">
                         <figure>
-                            <img src="#" alt="Aca van imagenes del producto">
+                            <img src="./src/imagen/zapatps.webp" alt="Aca van imagenes del producto">
                         </figure>
 
                         <div>
                             <h3>Lorem, ipsum dolor.</h3>
-                            <p>$X.XXX,xx</p>
+                            <p class="precio">$X.XXX,xx</p>
 
-                            <div>
+                            <div class="acciones">
                                 <a href="#">Ver detalle</a>
                                 <button>Comprar</button>
                             </div>

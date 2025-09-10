@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+
 #encabezado {
     background: #fff;
     color: #111318;
@@ -7,15 +9,16 @@
     font-family: "Work Sans", Arial, sans-serif;
 }
 
-#encabezado .marca {
+.marca {
     margin: 0;
     padding: 16px 16px 0;
     font-size: 20px;
     font-family: "Work Sans" Arial, sans-serif;
+    text-align: center;
 }
 
 #encabezado>div {
-    max-width: 1200px;
+    max-width: 90vw;
     margin: 0 auto;
     padding: 8px 16px 16px;
     display: flex;
@@ -29,7 +32,7 @@
     min-width: 260px;
 }
 
-#navegacionPrincipal .menu {
+.menu {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -40,15 +43,15 @@
     scrollbar-width: none;
 }
 
-#navegacionPrincipal .menu::-webkit-scrollbar {
+.menu::-webkit-scrollbar {
     display: none;
 }
 
-#navegacionPrincipal .itemMenu {
+.itemMenu {
     flex: 0 0 auto;
 }
 
-#navegacionPrincipal .enlaceMenu {
+.enlaceMenu {
     display: inline-block;
     padding: 10px 0;
     color: #545b66;
@@ -57,7 +60,7 @@
     font-family: "Work Sans", Arial, sans-serif;
 }
 
-#navegacionPrincipal .enlaceMenu:hover {
+.enlaceMenu:hover {
     color: #111318;
     border-color: #e6e8ec;
     transform: translateY(-1px);
@@ -83,7 +86,7 @@
     font-family: "Work Sans", Arial, sans-serif;
 }
 
-#navegacionCarrito #carrito:hover {
+#carrito:hover {
     background: #eef2f7;
     box-shadow: 0 6px 18px rgba(16, 24, 40, .06);
     transform: translateY(-1px);

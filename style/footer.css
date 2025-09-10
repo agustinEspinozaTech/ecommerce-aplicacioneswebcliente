@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+#footer{
+  background:#fff;
+  border-top:1px solid #e6e8ec;
+  font-family:"Work Sans", Arial, sans-serif;
+}
+
+#footer > div{
+  max-width:1200px;
+  margin:0 auto;
+  padding:20px 16px;
+}
+
+#footer p{
+  margin:0;
+  font-size:14px;
+  line-height:1.6;
+  color:#545b66;
+}
+
+
+@media (min-width:768px){
+  #footer > div{ padding:24px 16px; }
+  #footer p{ font-size:15px; }
+}

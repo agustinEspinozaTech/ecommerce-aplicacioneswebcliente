@@ -1,0 +1,97 @@
+.contacto {
+    background: #fff;
+    color: #111318;
+    font-family: "Work Sans", Arial, sans-serif;
+}
+
+.contacto>div {
+    width: 90vw;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 20px 16px 8px;
+    text-align: center;
+}
+
+.contacto h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.contacto p {
+    margin: 0 0 16px 0;
+    color: #545b66;
+    font-size: 14px;
+}
+
+#FormularioContactanos {
+    width: 90vw;
+    max-width: 720px;
+    margin: 0 auto 24px;
+    padding: 0 16px 24px;
+    display: grid;
+    gap: 12px;
+}
+
+
+#FormularioContactanos label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111318;
+}
+
+#FormularioContactanos input,
+#FormularioContactanos select,
+#FormularioContactanos textarea {
+    display: block;
+    width: 80%;
+    padding: 10px 12px;
+    border: 1px solid #e6e8ec;
+    border-radius: 10px;
+    background: #f7f9fc;
+    color: #111318;
+    font-size: 10px;
+    align-items: center;
+}
+
+#FormularioContactanos textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+
+#botonContactanos {
+    display: flex;
+    justify-content: center;
+    margin-top: 4px;
+}
+
+#botonContactanos button {
+    border: 0;
+    border-radius: 8px;
+    padding: 10px 14px;
+    background: #aaadb1;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+}
+
+#botonContactanos button:hover {
+    background: #a6b6c6;
+    transform: translateY(-1px);
+}
+
+@media (min-width:600px) {
+    #FormularioContactanos {
+        grid-template-columns: 1fr;
+    }
+
+    #botonContactanos {
+        grid-column: 1 / -1;
+    }
+
+    #botonContactanos button {
+        width: auto;
+    }
+}

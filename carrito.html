@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecommerce</title>
     <link rel="stylesheet" href="./style/header.css">
-    <link rel="stylesheet" href="./style/contactanos.css">
+    <link rel="stylesheet" href="./style/listaDeseos.css">
     <link rel="stylesheet" href="./style/footer.css">
 </head>
 
@@ -17,19 +17,19 @@
             <nav id="navegacionPrincipal">
                 <ul class="menu">
                     <li class="itemMenu">
-                        <a class="enlaceMenu" href="./productos.html">Productos</a>
+                        <a class="enlaceMenu" href="./index.html">Inicio</a>
                     </li>
                     <li class="itemMenu">
-                        <a class="enlaceMenu" href="#">Contactanos</a>
+                        <a class="enlaceMenu" href="./productos.html">Productos</a>
+                    </li>
+
+                    <li class="itemMenu">
+                        <a class="enlaceMenu" href="./contactanos.html">Contactanos</a>
                     </li>
                     <li class="itemMenu">
                         <a class="enlaceMenu" href="./listaDeseos.html">Lista de deseo</a>
                     </li>
                 </ul>
-            </nav>
-
-            <nav id="navegacionCarrito">
-                <a id="carrito" href="./carrito.html">Ir al carrito</a>
             </nav>
             <div id="contenedorBuscador">
                 <form id="buscador">
@@ -45,45 +45,13 @@
         </div>
     </header>
     <main>
-        <section class="contacto">
+        <section class="listaDeseos">
             <div>
-                <h2>¡Contactanos!</h2>
-                <p>Lorem ipsum dolor sit.</p>
-
+                <h2>Carrito de compras</h2>
+                <p>Por el momento no has agregado un producto al carrito de compras</p>
             </div>
-            <form id="FormularioContactanos">
-                <div class="grupo">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" placeholder="Ingresa tu nombre" required>
-                </div>
-
-                <div class="grupo">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Ingresa tu email" required>
-                </div>
-
-                <div class="grupo">
-                    <label for="motivo">Motivo</label>
-                    <select id="motivo" name="motivo" required>
-                        <option value="" selected disabled>Selecciona una opción</option>
-                        <option value="dudas">Dudas</option>
-                        <option value="compras">Compras</option>
-                        <option value="reclamos">Reclamos</option>
-                    </select>
-                </div>
-
-                <div class="grupo">
-                    <label for="mensaje">Mensaje</label>
-                    <textarea name="mensaje" id="mensaje"></textarea>
-                </div>
-
-                <div id="botonContactanos">
-                    <button type="submit">Enviar</button>
-                </div>
-            </form>
         </section>
     </main>
-
     <footer id="footer">
         <div>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam, pariatur porro. Autem similique doloribus

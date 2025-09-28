@@ -1,0 +1,38 @@
+.listaDeseos{
+  background:#fff;
+  color:#111318;
+  font-family:"Work Sans", Arial, sans-serif;
+  height: 500px;
+  align-content: center;
+}
+
+.listaDeseos > div{
+  width:90vw;
+  max-width:720px;
+  margin:0 auto;
+  padding:24px 16px;
+  text-align:center;
+  border:1px solid #e6e8ec;
+  border-radius:12px;
+  background:#f7f9fc;
+  height: 300px;
+    
+}
+
+.listaDeseos h2{
+  margin:0 0 6px 0;
+  font-size:22px;
+  font-weight:800;
+}
+
+.listaDeseos p{
+  margin:0;
+  font-size:14px;
+  color:#787c84;
+}
+
+@media (min-width:600px){
+  .listaDeseos > div{ padding:28px 20px; }
+  .listaDeseos h2{ font-size:24px; }
+  .listaDeseos p{ font-size:15px; }
+}

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./style/header.css">
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/footer.css">
+    <link rel="stylesheet" href="./style/modalVerDetalle.css">
 </head>
 
 <body>
@@ -64,11 +65,30 @@
                             <p class="precio">$X.XXX,xx</p>
 
                             <div class="acciones">
-                                <a href="#">Ver detalle</a>
+                                <a href="#detalleProducto">Ver detalle</a>
                                 <button>Comprar</button>
                             </div>
                         </div>
                     </article>
+                    <dialog id="detalleProducto" open aria-labelledby="tituloProducto"
+                        aria-describedby="descripcionCorta">
+                        <article>
+                              <a href="#" class="cerrarX" aria-label="Cerrar">×</a>
+                            <header>
+                                <h3 id="tituloProducto">Lorem, ipsum dolor.</h3>
+                            </header>
+
+                            <p class="precioProducto">$X.XXX,xx</p>
+                            <p class="stockProducto">Stock: XXX</p>
+                            <p id="descripcionCorta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+                                aut dolor adipisci minus laborum. Incidunt quibusdam quo cupiditate magni amet?</p>
+
+                            <div class="accionesProducto">
+                                <button type="button" class="agregarCarrito">Agregar al carrito</button>
+                                <button type="button" class="comprarAhora">Comprar</button>
+                            </div>
+                        </article>
+                    </dialog>
                 </li>
                 <li>
                     <article class="producto">
@@ -82,7 +102,7 @@
                             <p class="precio">$X.XXX,xx</p>
 
                             <div class="acciones">
-                                <a href="#">Ver detalle</a>
+                                <a href="#detalleProducto">Ver detalle</a>
                                 <button>Comprar</button>
                             </div>
                         </div>
@@ -100,7 +120,7 @@
                             <p class="precio">$X.XXX,xx</p>
 
                             <div class="acciones">
-                                <a href="#">Ver detalle</a>
+                                <a href="#detalleProducto">Ver detalle</a>
                                 <button>Comprar</button>
                             </div>
                         </div>
@@ -118,7 +138,7 @@
                             <p class="precio">$X.XXX,xx</p>
 
                             <div class="acciones">
-                                <a href="#">Ver detalle</a>
+                                <a href="#detalleProducto">Ver detalle</a>
                                 <button>Comprar</button>
                             </div>
                         </div>
@@ -136,7 +156,7 @@
                             <p class="precio">$X.XXX,xx</p>
 
                             <div class="acciones">
-                                <a href="#">Ver detalle</a>
+                                <a href="#detalleProducto">Ver detalle</a>
                                 <button>Comprar</button>
                             </div>
                         </div>
@@ -154,7 +174,7 @@
                             <p class="precio">$X.XXX,xx</p>
 
                             <div class="acciones">
-                                <a href="#">Ver detalle</a>
+                                <a href="#detalleProducto">Ver detalle</a>
                                 <button>Comprar</button>
                             </div>
                         </div>
@@ -172,7 +192,7 @@
                             <p class="precio">$X.XXX,xx</p>
 
                             <div class="acciones">
-                                <a href="#">Ver detalle</a>
+                                <a href="#detalleProducto">Ver detalle</a>
                                 <button>Comprar</button>
                             </div>
                         </div>
@@ -190,7 +210,7 @@
                             <p class="precio">$X.XXX,xx</p>
 
                             <div class="acciones">
-                                <a href="#">Ver detalle</a>
+                                <a href="#detalleProducto">Ver detalle</a>
                                 <button>Comprar</button>
                             </div>
                         </div>
@@ -208,7 +228,7 @@
                             <p class="precio">$X.XXX,xx</p>
 
                             <div class="acciones">
-                                <a href="#">Ver detalle</a>
+                                <a href="#detalleProducto">Ver detalle</a>
                                 <button>Comprar</button>
                             </div>
                         </div>
@@ -226,7 +246,7 @@
                             <p class="precio">$X.XXX,xx</p>
 
                             <div class="acciones">
-                                <a href="#">Ver detalle</a>
+                                <a href="#detalleProducto">Ver detalle</a>
                                 <button>Comprar</button>
                             </div>
                         </div>

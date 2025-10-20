@@ -1,96 +1,96 @@
+dialog {
+  display: none;
+}
 
 dialog[open] {
-    display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  margin: 0;
+  border: 0;
+  background: rgba(0, 0, 0, .5);
 }
 
-dialog[open]:target {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 16px;
-    margin: 0;
-    border: 0;
-    background: rgba(0, 0, 0, .5);
+dialog[open] > article {
+  background: #fff;
+  color: #111318;
+  width: 92vw;
+  max-width: 500px;
+  max-height: 85vh;
+  overflow: auto;
+  border: 1px solid #e6e8ec;
+  border-radius: 12px;
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+  position: relative;
 }
 
-dialog[open]:target>article {
-    background: #fff;
-    color: #111318;
-    width: 92vw;
-    max-width: 500px;
-    max-height: 85vh;
-    overflow: auto;
-    border: 1px solid #e6e8ec;
-    border-radius: 12px;
-    padding: 16px;
-    display: grid;
-    gap: 12px;
-    position: relative;
+dialog[open] header h3 {
+  text-align: center;
 }
 
-dialog[open]:target header h3 {
-    text-align: center;
+dialog[open] .precioProducto {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
 }
 
-dialog[open]:target .precioProducto {
-    margin: 0;
-    font-size: 20px;
-    font-weight: 800;
+dialog[open] .stockProducto {
+  margin: 0;
+  font-size: 14px;
+  color: #545b66;
 }
 
-dialog[open]:target .stockProducto {
-    margin: 0;
-    font-size: 14px;
-    color: #545b66;
+dialog[open] #descripcionCorta {
+  margin: 0;
+  line-height: 1.6;
+  color: #111318;
+  font-size: 15px;
 }
 
-dialog[open]:target #descripcionCorta {
-    margin: 0;
-    line-height: 1.6;
-    color: #111318;
-    font-size: 15px;
+dialog[open] .accionesProducto {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+  justify-content: center;
 }
 
-dialog[open]:target .accionesProducto {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-top: 4px;
-    justify-content: center;
+dialog[open] .accionesProducto .agregarCarrito,
+dialog[open] .accionesProducto .comprarAhora {
+  border: 1px solid #e6e8ec;
+  background: #f7f9fc;
+  color: #111318;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
-dialog[open]:target .accionesProducto .agregarCarrito,
-dialog[open]:target .accionesProducto .comprarAhora {
-    border: 1px solid #e6e8ec;
-    background: #f7f9fc;
-    color: #111318;
-    padding: 10px 14px;
-    border-radius: 999px;
-    font-weight: 700;
-    cursor: pointer;
+dialog[open] .cerrarX {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #111318;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
 }
 
-dialog[open]:target .cerrarX{
-  position:absolute;
-  top:8px;
-  right:8px;
-  width:32px;
-  height:32px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  color:#111318;
-  text-decoration:none;
-  font-weight:700;
-  cursor:pointer;
-}
-@media (min-width:720px) {
-    dialog[open]:target>article {
-        padding: 20px;
-    }
+@media (min-width: 720px) {
+  dialog[open] > article {
+    padding: 20px;
+  }
 }

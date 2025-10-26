@@ -1,4 +1,5 @@
-const mount = () => {
+export function renderListaDeseos() {
+  document.querySelectorAll('main').forEach(m => m.remove())
   const template = document.createElement('template')
   template.innerHTML = `
     <main>
@@ -11,10 +12,4 @@ const mount = () => {
     </main>
   `.trim()
   document.body.appendChild(template.content.firstElementChild)
-}
-
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', mount)
-} else {
-  mount()
 }

@@ -1,5 +1,7 @@
-const mount = () => {
-  const template = document.createElement('template')
+export function renderContactanos() {
+  document.querySelectorAll('main').forEach(m => m.remove());
+
+  const template = document.createElement('template');
   template.innerHTML = `
     <main>
       <section class="contacto">
@@ -35,12 +37,7 @@ const mount = () => {
         </form>
       </section>
     </main>
-  `.trim()
-  document.body.appendChild(template.content.firstElementChild)
-}
+  `.trim();
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', mount)
-} else {
-  mount()
+  document.body.appendChild(template.content.firstElementChild);
 }

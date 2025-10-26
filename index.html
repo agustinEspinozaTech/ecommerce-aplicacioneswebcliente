@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/footer.css">
     <link rel="stylesheet" href="./style/modalVerDetalle.css">
+    <link rel="stylesheet" href="./style/contactanos.css">
+    <link rel="stylesheet" href="./style/listaDeseos.css">
 </head>
 
 <body>
@@ -18,13 +20,16 @@
             <nav id="navegacionPrincipal">
                 <ul class="menu">
                     <li class="itemMenu">
-                        <a class="enlaceMenu" href="./productos.html">Productos</a>
+                        <a class="enlaceMenu" href="#inicio" data-view="inicio">Inicio</a>
                     </li>
                     <li class="itemMenu">
-                        <a class="enlaceMenu" href="./contactanos.html">Contactanos</a>
+                        <a class="enlaceMenu" href="#productos" data-view="productos">Productos</a>
                     </li>
                     <li class="itemMenu">
-                        <a class="enlaceMenu" href="./listaDeseos.html">Lista de deseo</a>
+                        <a class="enlaceMenu" href="#contactanos" data-view="contactanos">Contactanos</a>
+                    </li>
+                    <li class="itemMenu">
+                        <a class="enlaceMenu" href="#listaDeseos" data-view="listaDeseos">Lista de deseo</a>
                     </li>
                 </ul>
             </nav>
@@ -40,7 +45,7 @@
                 </form>
             </div>
             <nav id="navegacionCarrito">
-                <a id="carrito" href="./carrito.html">Ir al carrito</a>
+                <a id="carrito" class="enlaceMenu" href="#carrito" data-view="carrito">Ir al carrito</a>
             </nav>
 
         </div>
@@ -54,8 +59,10 @@
                 nam eligendi velit.</p>
         </div>
     </footer>
- <script type="module" src="./index.js"></script>
-<script src="./js/inicio.js"></script>
+    <script type="module" src="./rutas.js"></script>
+    <script type="module" src="./index.js"></script>
+    <script src="./js/inicio.js"></script>
+
 </body>
 
 </html>

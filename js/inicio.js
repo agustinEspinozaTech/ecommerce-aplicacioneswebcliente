@@ -27,6 +27,7 @@ export async function renderInicio() {
           <div>
             <h3>${p.title}</h3>
             <p class="precio">$${p.price}</p>
+             <p class="precio">Talle disponible: ${p.talle}</p>
             <div class="acciones">
               <a href="#detalleProducto" class="verDetalle" data-id="${p.id}">Ver detalle</a>
               <button>Comprar</button>

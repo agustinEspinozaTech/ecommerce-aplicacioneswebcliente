@@ -3,6 +3,7 @@ import { renderProductos } from "./js/productos.js"
 import { renderContactanos } from "./js/contactanos.js"
 import { renderListaDeseos } from "./js/listaDeseos.js"
 import { renderCarrito } from "./js/carrito.js"
+import { renderProductosAdmin } from "./js/productosAdmin.js"
 
 function manejarNavegacion(e) {
   const link = e.target.closest('a.enlaceMenu[data-view]')
@@ -24,6 +25,9 @@ function manejarNavegacion(e) {
       break
     case 'carrito':
       renderCarrito()
+      break
+    case 'productosAdmin':
+      renderProductosAdmin()
       break
   }
 }

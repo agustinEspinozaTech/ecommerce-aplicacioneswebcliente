@@ -1,0 +1,136 @@
+.productos-admin {
+  background: #fff;
+  color: #111318;
+  font-family: "Work Sans", Arial, sans-serif;
+}
+
+.productos-admin>div {
+  width: 90vw;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px 16px 8px;
+  text-align: center;
+}
+
+.productos-admin h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.productos-admin p {
+  margin: 0 0 16px 0;
+  color: #545b66;
+  font-size: 14px;
+}
+
+#FormularioProductos {
+  width: 90vw;
+  max-width: 720px;
+  margin: 0 auto 24px;
+  padding: 0 16px 24px;
+  display: grid;
+  gap: 12px;
+}
+
+#FormularioProductos label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111318;
+}
+
+#FormularioProductos input,
+#FormularioProductos textarea {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e6e8ec;
+  border-radius: 10px;
+  background: #f7f9fc;
+  color: #111318;
+  font-size: 10px;
+}
+
+#FormularioProductos textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+#botonProductos {
+  display: flex;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+#botonProductos button {
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  background: #aaadb1;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+
+#botonProductos button:hover {
+  background: #a6b6c6;
+  transform: translateY(-1px);
+}
+
+#grillaProductos {
+  width: 90vw;
+  max-width: 960px;
+  margin: 0 auto 32px;
+  padding: 0 16px;
+}
+
+.grilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.item {
+  border: 1px solid #e6e8ec;
+  border-radius: 12px;
+  padding: 12px;
+  background: #f7f9fc;
+  text-align: center;
+}
+
+.item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.item h3 {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 4px 0;
+}
+
+.item p {
+  font-size: 12px;
+  color: #545b66;
+  margin: 2px 0;
+}
+
+.item button {
+  margin-top: 8px;
+  border: 1px solid #e6e8ec;
+  border-radius: 8px;
+  padding: 8px 12px;
+  background: #aaadb1;
+  color: #111318;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.item button:hover {
+  background: #a6b6c6;
+  transform: translateY(-1px);
+}

@@ -89,6 +89,14 @@ dialog[open] .cerrarX {
   cursor: pointer;
 }
 
+dialog[open] img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
 @media (min-width: 720px) {
   dialog[open] > article {
     padding: 20px;

@@ -1,4 +1,5 @@
 import { getProductoPorId } from './servicios.js'
+import { addProductoAlCarrito } from './js/carrito.js'
 
 document.addEventListener('click', async (e) => {
   const btnDetalle = e.target.closest('.verDetalle')
@@ -10,26 +11,42 @@ document.addEventListener('click', async (e) => {
 
   try {
     const producto = await getProductoPorId(id)
+    const dialog = document.querySelector('#detalleProducto')
+
     dialog.innerHTML = `
-      <article class="productoDetalle">
-        <a href="#" class="cerrarX" aria-label="Cerrar">×</a>
-        <header>
-          <h3 id="tituloProducto">${producto.title}</h3>
-        </header>
-        <img src="${producto.thumbnail}" alt="${producto.title}">
-        <p class="precioProducto">$${producto.price}</p>
-        <p class="stockProducto">Stock: ${producto.stock}</p>
-        <p id="descripcionCorta">${producto.description}</p>
-        <div class="accionesProducto">
-          <button type="button" class="agregarCarrito">Agregar al carrito</button>
-          <button type="button" class="comprarAhora">Comprar</button>
-        </div>
-      </article>
-    `
+    <article class="productoDetalle">
+      <a href="#" class="cerrarX" aria-label="Cerrar">×</a>
+      <header>
+        <h3 id="tituloProducto">${producto.title}</h3>
+      </header>
+      <img src="${producto.thumbnail}" alt="${producto.title}">
+      <p class="precioProducto">$${producto.price}</p>
+      <p class="stockProducto">Stock: ${producto.stock}</p>
+      <p id="descripcionCorta">${producto.description}</p>
+      <div class="accionesProducto">
+        <button type="button" class="agregarCarrito">Agregar al carrito</button>
+        <button type="button" class="comprarAhora">Comprar</button>
+        <p class="mensajeExito" style="display:none;">Producto agregado al carrito</p>
+      </div>
+    </article>
+  `
     dialog.showModal()
+
+    const btnAgregar = dialog.querySelector('.agregarCarrito')
+    const mensajeExito = dialog.querySelector('.mensajeExito')
+
+    btnAgregar.addEventListener('click', () => {
+      addProductoAlCarrito(producto)
+
+      mensajeExito.style.display = 'block'
+      setTimeout(() => {
+        mensajeExito.style.display = 'none'
+      }, 2000)
+    })
   } catch (err) {
     console.error('Error al cargar detalle:', err)
   }
+
 })
 
 document.addEventListener('click', (e) => {

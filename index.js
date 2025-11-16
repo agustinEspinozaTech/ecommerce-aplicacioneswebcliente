@@ -1,5 +1,7 @@
 import { getProductoPorId } from './servicios.js'
 import { addProductoAlCarrito } from './js/carrito.js'
+import { showToast } from './js/toast.js'
+
 
 document.addEventListener('click', async (e) => {
   const btnDetalle = e.target.closest('.verDetalle')
@@ -26,22 +28,17 @@ document.addEventListener('click', async (e) => {
       <div class="accionesProducto">
         <button type="button" class="agregarCarrito">Agregar al carrito</button>
         <button type="button" class="comprarAhora">Comprar</button>
-        <p class="mensajeExito" style="display:none;">Producto agregado al carrito</p>
       </div>
     </article>
   `
     dialog.showModal()
 
     const btnAgregar = dialog.querySelector('.agregarCarrito')
-    const mensajeExito = dialog.querySelector('.mensajeExito')
 
     btnAgregar.addEventListener('click', () => {
       addProductoAlCarrito(producto)
+      showToast('Producto agregado al carrito', 'success')
 
-      mensajeExito.style.display = 'block'
-      setTimeout(() => {
-        mensajeExito.style.display = 'none'
-      }, 2000)
     })
   } catch (err) {
     console.error('Error al cargar detalle:', err)

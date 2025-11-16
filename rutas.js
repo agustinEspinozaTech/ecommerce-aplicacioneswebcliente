@@ -4,7 +4,9 @@ import { renderContactanos } from "./js/contactanos.js";
 import { renderListaDeseos } from "./js/listaDeseos.js";
 import { renderCarrito } from "./js/carrito.js";
 import { renderProductosAdmin } from "./js/productosAdmin.js";
-import { inicializarBuscador } from "./js/buscador.js"; 
+import { inicializarBuscador } from "./js/buscador.js";
+import { renderProductosEditar } from "./js/productosEditar.js";
+
 
 function manejarNavegacion(e) {
   const link = e.target.closest('a.enlaceMenu[data-view]');
@@ -32,6 +34,9 @@ function manejarNavegacion(e) {
     case 'productosAdmin':
       renderProductosAdmin();
       break;
+    case 'productosEditar':
+      renderProductosEditar()
+      break
   }
 
 

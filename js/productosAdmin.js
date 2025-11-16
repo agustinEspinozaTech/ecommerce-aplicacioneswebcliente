@@ -1,6 +1,6 @@
 import { getProductos, postProducto, deleteProducto } from '../servicios.js';
 import { mostrarConfirmacion } from './confirmacionPopup.js';
-
+import { showToast } from './toast.js'
 
 
 export async function renderProductosAdmin() {
@@ -64,6 +64,7 @@ export async function renderProductosAdmin() {
       thumbnail: form.thumbnail.value.trim()
     };
     await postProducto(nuevo);
+    showToast('Producto agregado correctamente', 'success')
     form.reset();
     await cargarProductos();
   });
@@ -89,6 +90,7 @@ export async function renderProductosAdmin() {
       btn.addEventListener('click', () => {
         mostrarConfirmacion('¿Estas seguro que deseas eliminar este producto?', async () => {
           await deleteProducto(btn.dataset.id);
+          showToast('Producto eliminado', 'info')
           await cargarProductos();
         });
       });

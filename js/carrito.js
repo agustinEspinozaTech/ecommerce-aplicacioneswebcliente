@@ -8,7 +8,7 @@ function getCarrito() {
     console.error('Error leyendo carrito:', err)
     return []
   }
-  
+
 }
 function saveCarrito(carrito) {
   localStorage.setItem(CARRITO_KEY, JSON.stringify(carrito))
@@ -61,12 +61,10 @@ function eliminarProducto(id) {
 
 export function renderCarrito() {
   const contenido = document.querySelector('#contenido')
-  if (!contenido) {
-    console.warn('No se encontró #contenido para renderizar el carrito')
-    return
-  }
+  if (!contenido) return
 
   const carrito = getCarrito()
+  const totalCarrito = carrito.reduce((acc, p) => acc + p.price * p.cantidad, 0)
 
   contenido.innerHTML = `
     <section class="destacados">
@@ -84,6 +82,7 @@ export function renderCarrito() {
               <div>
                 <h3>${p.title}</h3>
                 <p class="precio">$${p.price}</p>
+                <p class="precioTotal">Total: $${p.price * p.cantidad}</p>
                 <div class="acciones">
                   <button type="button" data-action="restar" data-id="${p.id}">-</button>
                   <span class="cantidad">${p.cantidad}</span>
@@ -96,9 +95,11 @@ export function renderCarrito() {
           </li>
         `).join('')}
       </ul>
+      <p class="totalCarrito">Total a pagar: $${totalCarrito}</p>
     </section>
   `
 }
+
 
 document.addEventListener('click', (e) => {
   const btn = e.target.closest('[data-action]')

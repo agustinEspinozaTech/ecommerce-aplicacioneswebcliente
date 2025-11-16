@@ -1,3 +1,6 @@
+import { postContacto } from '../servicios.js'
+import { showToast } from './toast.js'
+
 export function renderContactanos() {
   document.querySelectorAll('main').forEach(m => m.remove());
 
@@ -40,4 +43,21 @@ export function renderContactanos() {
   `.trim();
 
   document.body.appendChild(template.content.firstElementChild);
+
+  const form = document.getElementById('FormularioContactanos')
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault()
+
+    const contacto = {
+      nombre: form.nombre.value.trim(),
+      email: form.email.value.trim(),
+      motivo: form.motivo.value,
+      mensaje: form.mensaje.value.trim()
+    }
+
+    await postContacto(contacto)
+    showToast('Mensaje enviado correctamente', 'success')
+    form.reset()
+  })
 }

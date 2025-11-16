@@ -1,6 +1,8 @@
-import { AIRTABLE_TOKEN, BASE_ID, TABLE_NAME } from './env.js';
+import { AIRTABLE_TOKEN, BASE_ID, TABLE_NAME, CONTACT_TABLE_NAME } from './env.js';
 
 const baseUrl = `https://api.airtable.com/v0/${BASE_ID}/${TABLE_NAME}`;
+const baseUrlContactos = `https://api.airtable.com/v0/${BASE_ID}/${CONTACT_TABLE_NAME}`;
+
 const headers = {
   Authorization: `Bearer ${AIRTABLE_TOKEN}`,
   'Content-Type': 'application/json',
@@ -66,3 +68,19 @@ export async function deleteProducto(id) {
   const data = await request(`${baseUrl}/${id}`, { method: 'DELETE' });
   return { id: data.id, deleted: data.deleted === true };
 }
+
+const adaptInContacto = (c) => {
+  const fields = {};
+  if (c.nombre !== undefined) fields.nombre = c.nombre;
+  if (c.email !== undefined) fields.email = c.email;
+  if (c.motivo !== undefined) fields.motivo = c.motivo;
+  if (c.mensaje !== undefined) fields.mensaje = c.mensaje;
+  return { fields };
+};
+
+export async function postContacto(contacto) {
+  const body = JSON.stringify(adaptInContacto(contacto));
+  const data = await request(baseUrlContactos, { method: 'POST', body });
+  return data;
+}
+

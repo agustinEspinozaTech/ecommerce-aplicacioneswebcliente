@@ -29,7 +29,7 @@ export async function renderInicio() {
             <p class="precio">$${p.price}</p>
              <p class="precio">Talle disponible: ${p.talle}</p>
             <div class="acciones">
-              <a href="#detalleProducto" class="verDetalle" data-id="${p.id}">Ver detalle</a>
+              <a href="#detalleProducto" class="verDetalle" data-id="${p.id}">Ver detalles</a>
               <button>Comprar</button>
             </div>
           </div>

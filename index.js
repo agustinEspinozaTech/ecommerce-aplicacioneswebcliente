@@ -26,7 +26,7 @@ document.addEventListener('click', async (e) => {
       <p class="stockProducto">Stock: ${producto.stock}</p>
       <p id="descripcionCorta">${producto.description}</p>
       <div class="accionesProducto">
-        <button type="button" class="agregarCarrito">Agregar a favoritos</button>
+        <button type="button" class="agregarCarrito">Agregar al carrito</button>
         <button type="button" class="comprarAhora">Comprar</button>
       </div>
     </article>

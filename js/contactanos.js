@@ -1,5 +1,6 @@
 import { postContacto } from '../servicios.js'
 import { showToast } from './toast.js'
+import { mostrarConfirmacion } from './confirmacionPopup.js'
 
 export function renderContactanos() {
   document.querySelectorAll('main').forEach(m => m.remove());
@@ -56,8 +57,13 @@ export function renderContactanos() {
       mensaje: form.mensaje.value.trim()
     }
 
-    await postContacto(contacto)
-    showToast('Mensaje enviado correctamente', 'success')
-    form.reset()
+    mostrarConfirmacion(
+      '¿Deseas enviar el formulario?',
+      async () => {
+        await postContacto(contacto)
+        showToast('Mensaje enviado correctamente', 'success')
+        form.reset()
+      }
+    )
   })
 }

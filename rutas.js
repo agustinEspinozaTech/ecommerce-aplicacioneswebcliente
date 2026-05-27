@@ -4,6 +4,7 @@ import { renderContactanos } from "./js/contactanos.js";
 import { renderListaDeseos } from "./js/listaDeseos.js";
 import { renderCarrito } from "./js/carrito.js";
 import { renderProductosAdmin } from "./js/productosAdmin.js";
+import { renderColaboradores } from "./js/colaboradores.js";
 import { inicializarBuscador } from "./js/buscador.js";
 import { renderProductosEditar } from "./js/productosEditar.js";
 
@@ -36,6 +37,9 @@ function manejarNavegacion(e) {
       break;
     case 'productosEditar':
       renderProductosEditar()
+      break
+    case 'colaboradores':
+      renderColaboradores()
       break
   }
 

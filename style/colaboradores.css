@@ -1,0 +1,158 @@
+.colaboradores-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px 16px;
+    font-family: "Work Sans", Arial, sans-serif;
+}
+
+.colaboradores-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #111318;
+}
+
+.colaboradores-header a {
+    text-decoration: none;
+    color: #111318;
+    font-size: 24px;
+}
+
+.colaboradores-section {
+    background: #fff;
+    border: 1px solid #e6e8ec;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.colaboradores-section h3 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #111318;
+}
+
+.colaboradores-section p {
+    margin: 0 0 24px 0;
+    font-size: 14px;
+    color: #545b66;
+}
+
+.colaboradores-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.colaboradores-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.colaboradores-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111318;
+}
+
+.colaboradores-group input {
+    padding: 10px 12px;
+    border: 1px solid #e6e8ec;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+.colaboradores-group input:focus {
+    border-color: #aaadb1;
+}
+
+.error-message {
+    color: #d32f2f;
+    font-size: 12px;
+    margin-top: 4px;
+    height: 14px;
+}
+
+.cuit-input-group {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    max-width: 400px;
+}
+
+.cuit-input-group input {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid #e6e8ec;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.btn-ingresar {
+    padding: 10px 20px;
+    background: #eef2f7;
+    border: 1px solid #e6e8ec;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    color: #545b66;
+}
+
+.btn-ingresar:hover {
+    background: #e2e8f0;
+}
+
+.colaboradores-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.btn-cancelar {
+    color: #f57c00;
+    text-decoration: none;
+    font-weight: 700;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-confirmar {
+    padding: 10px 24px;
+    background: #eef2f7;
+    border: 1px solid #e6e8ec;
+    border-radius: 8px;
+    font-weight: 700;
+    color: #aaadb1;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.btn-confirmar.enabled {
+    background: #f57c00;
+    color: #fff;
+    border-color: #f57c00;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.btn-confirmar.enabled:hover {
+    background: #e67300;
+}
+
+@media (max-width: 768px) {
+    .colaboradores-grid {
+        grid-template-columns: 1fr;
+    }
+}

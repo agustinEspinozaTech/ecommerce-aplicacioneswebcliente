@@ -5,6 +5,10 @@ import { renderListaDeseos } from "./js/listaDeseos.js";
 import { renderCarrito } from "./js/carrito.js";
 import { renderProductosAdmin } from "./js/productosAdmin.js";
 import { renderColaboradores } from "./js/colaboradores.js";
+import { renderHome } from "./js/home.js";
+import { renderLogin } from "./js/login.js";
+import { renderWelcome } from "./js/welcome.js";
+import { renderMiPerfil } from "./js/miperfil.js";
 import { inicializarBuscador } from "./js/buscador.js";
 import { renderProductosEditar } from "./js/productosEditar.js";
 
@@ -40,6 +44,18 @@ function manejarNavegacion(e) {
       break
     case 'colaboradores':
       renderColaboradores()
+      break
+    case 'home':
+      renderHome()
+      break
+    case 'login':
+      renderLogin()
+      break
+    case 'welcome':
+      renderWelcome()
+      break
+    case 'miperfil':
+      renderMiPerfil()
       break
   }
 

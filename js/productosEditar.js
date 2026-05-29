@@ -2,6 +2,11 @@ import { getProductos, putProducto } from '../servicios.js'
 import { showToast } from './toast.js'
 
 export async function renderProductosEditar() {
+  const header = document.getElementById('encabezado');
+  const footer = document.getElementById('footer');
+  if (header) header.style.display = 'block';
+  if (footer) footer.style.display = 'block';
+
   document.querySelectorAll('main').forEach(m => m.remove())
 
   const template = document.createElement('template')

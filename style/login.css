@@ -1,0 +1,115 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    font-family: "Work Sans", Arial, sans-serif;
+}
+
+.login-card {
+    background: #fff;
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-top: 6px solid #f57c00;
+    text-align: center;
+    position: relative;
+}
+
+.login-brand {
+    font-size: 42px;
+    font-weight: 800;
+    color: #f57c00;
+    margin-bottom: 40px;
+    font-family: "Work Sans", Arial, sans-serif;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.login-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.login-group label {
+    font-size: 14px;
+    color: #545b66;
+}
+
+.login-group input {
+    padding: 12px;
+    border: 1px solid #e6e8ec;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+}
+
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper input {
+    width: 100%;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    cursor: pointer;
+    color: #aaadb1;
+    font-size: 18px;
+    user-select: none;
+}
+
+.forgot-password {
+    text-align: right;
+    font-size: 13px;
+    color: #f57c00;
+    text-decoration: none;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.btn-login {
+    background: #f57c00;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-login:hover {
+    background: #e67300;
+}
+
+.login-back-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color: #545b66;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.login-back-link:hover {
+    color: #111318;
+}

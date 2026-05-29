@@ -60,6 +60,11 @@ function eliminarProducto(id) {
 }
 
 export function renderCarrito() {
+  const header = document.getElementById('encabezado');
+  const footer = document.getElementById('footer');
+  if (header) header.style.display = 'block';
+  if (footer) footer.style.display = 'block';
+
   const contenido = document.querySelector('#contenido')
   if (!contenido) return
 

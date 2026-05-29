@@ -1,0 +1,252 @@
+.home-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    font-family: "Work Sans", Arial, sans-serif;
+    overflow: hidden;
+    background: #fff;
+}
+
+.home-left {
+    flex: 1;
+    position: relative;
+    background-color: #f8f9fa;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 50%), url('../home.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 60px;
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+.home-left-content {
+    max-width: 500px;
+    z-index: 2;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.home-left-content h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+}
+
+.home-left-content p {
+    font-size: 18px;
+    margin: 0 0 24px 0;
+    opacity: 0.9;
+}
+
+.home-left-decoration {
+    display: flex;
+    gap: 8px;
+}
+
+.home-left-decoration span {
+    height: 4px;
+    width: 40px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+}
+
+.home-left-decoration span.active {
+    background: #fff;
+}
+
+.home-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    position: relative;
+    background: #fff;
+    text-align: center;
+}
+
+.home-top-link {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #8b4513;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.home-back-link {
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #545b66;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.home-back-link:hover {
+    color: #111318;
+}
+
+.home-logo {
+    margin-bottom: 40px;
+}
+
+.home-logo img {
+    max-width: 150px;
+}
+
+.home-welcome-text {
+    font-size: 20px;
+    color: #111318;
+    margin-bottom: 32px;
+    max-width: 400px;
+    line-height: 1.4;
+}
+
+.btn-ingresar-nexo {
+    background: #8b4513;
+    color: #fff;
+    border: none;
+    padding: 16px 40px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-bottom: 32px;
+}
+
+.btn-ingresar-nexo:hover {
+    background: #a0522d;
+}
+
+.home-register-text {
+    font-size: 16px;
+    color: #545b66;
+    margin-bottom: 60px;
+}
+
+.home-register-link {
+    display: block;
+    color: #111318;
+    text-decoration: underline;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.home-contact-box {
+    border: 1px solid #e6e8ec;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    max-width: 600px;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.home-contact-icon {
+    font-size: 24px;
+}
+
+.home-contact-text {
+    font-size: 14px;
+    color: #545b66;
+}
+
+.home-contact-email {
+    color: #8b4513;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.home-footer {
+    position: absolute;
+    bottom: 40px;
+    left: 60px;
+    right: 60px;
+    text-align: left;
+    font-size: 11px;
+    color: #545b66;
+    line-height: 1.5;
+}
+
+.home-footer-links {
+    margin-bottom: 8px;
+}
+
+.home-footer-links a {
+    color: #111318;
+    text-decoration: underline;
+    margin-right: 8px;
+}
+
+.home-footer-copyright {
+    margin-top: 8px;
+}
+
+.home-manual-link {
+    position: absolute;
+    bottom: 40px;
+    right: 60px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #111318;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.home-manual-icon {
+    width: 32px;
+    height: 32px;
+}
+
+@media (max-width: 900px) {
+    .home-container {
+        flex-direction: column;
+        height: auto;
+    }
+    .home-left {
+        height: 400px;
+        padding: 30px;
+    }
+    .home-right {
+        padding: 40px 20px;
+        position: relative;
+    }
+    .home-top-link, .home-footer, .home-manual-link {
+        position: static;
+        margin: 20px 0;
+        text-align: center;
+        justify-content: center;
+    }
+    .home-footer {
+        text-align: center;
+    }
+}

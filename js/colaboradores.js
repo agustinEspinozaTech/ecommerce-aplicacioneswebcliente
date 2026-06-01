@@ -23,7 +23,7 @@ export function renderColaboradores() {
             <div class="colaboradores-group">
               <label for="cuit-search">CUIT</label>
               <div class="cuit-input-group">
-                <input type="text" id="cuit-search" placeholder="Ingresar" maxlength="11" data-testid="cuit-search-input">
+                 <input type="text" id="cuit-search" placeholder="Ingresar" maxlength="11" data-testid="cuit-search-input">
                 <button class="btn-ingresar" id="btn-cuit-ingresar" data-testid="cuit-search-button">Ingresar</button>
               </div>
               <div id="error-cuit-search" class="error-message" data-testid="cuit-search-error"></div>
@@ -37,7 +37,7 @@ export function renderColaboradores() {
           <div class="colaboradores-grid">
             <div class="colaboradores-group">
               <label for="cuit-display">CUIT</label>
-              <input type="text" id="cuit-display" placeholder="Ingresar" maxlength="11" data-testid="cuit-display-input">
+               <input type="text" id="cuit-display" placeholder="Ingresar" maxlength="11" data-testid="cuit-display-input">
               <div id="error-cuit-display" class="error-message" data-testid="cuit-display-error"></div>
             </div>
             <div class="colaboradores-group">
@@ -114,9 +114,9 @@ export function renderColaboradores() {
     } else if (value) {
       if (config.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
         error = 'formato invalido';
-      } else if (config.type === 'cuit' && !/^\d{1,11}$/.test(value)) {
-        error = 'formato invalido';
-      }
+       } else if (config.type === 'cuit' && !/^\d{1,11}$/.test(value)) {
+         error = 'formato invalido';
+       }
     }
 
     errorDiv.textContent = error;
@@ -144,19 +144,21 @@ export function renderColaboradores() {
     }
   });
 
-  btnConfirmar.addEventListener('click', () => {
-    if (validateAll(true)) {
-      showToast('Colaborador creado con éxito (Simulado)', 'success');
-      // Simulate redirect or reset
-      setTimeout(() => {
-        window.location.hash = 'inicio';
-        // In a real app we'd call the router, here we just simulate a reload or event
-        document.querySelector('.enlaceMenu[data-view="inicio"]').click();
-      }, 2000);
-    } else {
-      showToast('Por favor, completa todos los campos obligatorios', 'error');
-    }
-  });
+   btnConfirmar.addEventListener('click', () => {
+     if (validateAll(true)) {
+       mostrarConfirmacion('¿Estás seguro de que deseas confirmar la creación del colaborador?', () => {
+         showToast('Colaborador creado exitosamente (Simulado)', 'success');
+         // Simulate redirect or reset
+         setTimeout(() => {
+           window.location.hash = 'inicio';
+           // In a real app we'd call the router, here we just simulate a reload or event
+           document.querySelector('.enlaceMenu[data-view="inicio"]').click();
+         }, 2000);
+       });
+     } else {
+       showToast('Por favor, completa todos los campos obligatorios', 'error');
+     }
+   });
 
   btnCancelar.addEventListener('click', () => {
     document.querySelector('.enlaceMenu[data-view="inicio"]').click();

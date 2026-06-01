@@ -15,18 +15,19 @@ export function renderLogin() {
         <div class="login-brand">Medifé</div>
         
         <form id="form-login" class="login-form">
-          <div class="login-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Ingresar email" required>
-          </div>
+           <div class="login-group">
+             <label for="email">Email</label>
+             <input type="email" id="email" placeholder="Ingresar email" required>
+           </div>
           
-          <div class="login-group">
-            <label for="password">Contraseña</label>
-            <div class="password-wrapper">
-              <input type="password" id="password" placeholder="Ingresar contraseña" required>
-              <span class="toggle-password" id="toggle-pwd">👁️</span>
-            </div>
-          </div>
+           <div class="login-group">
+             <label for="password">Contraseña</label>
+             <div class="password-wrapper">
+               <input type="password" id="password" placeholder="Ingresar contraseña" required>
+               <span class="toggle-password" id="toggle-pwd">👁️</span>
+             </div>
+             <div id="error-password" class="error-message" style="color: red; font-size: 12px; margin-top: 4px; text-align: left;"></div>
+           </div>
           
           <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
           
@@ -38,12 +39,25 @@ export function renderLogin() {
 
   document.body.appendChild(template.content.firstElementChild);
 
-  const form = document.getElementById('form-login');
-  const passwordInput = document.getElementById('password');
-  const togglePwd = document.getElementById('toggle-pwd');
-  const btnVolver = document.getElementById('btn-volver-home');
+   const form = document.getElementById('form-login');
+   const passwordInput = document.getElementById('password');
+   const passwordError = document.getElementById('error-password');
+   const togglePwd = document.getElementById('toggle-pwd');
+   const btnVolver = document.getElementById('btn-volver-home');
 
-  // Toggle password visibility
+   // Password numeric validation
+   passwordInput.addEventListener('input', () => {
+     const value = passwordInput.value;
+     if (/[^0-9]/.test(value)) {
+       passwordError.textContent = 'solo se permite caracteres numericos';
+       passwordInput.style.borderColor = 'red';
+     } else {
+       passwordError.textContent = '';
+       passwordInput.style.borderColor = '';
+     }
+   });
+
+   // Toggle password visibility
   togglePwd.addEventListener('click', () => {
     const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
     passwordInput.setAttribute('type', type);
@@ -59,22 +73,27 @@ export function renderLogin() {
     }
   });
 
-  // Login simulation
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    // Navigate to welcome screen instead of inicio
-    window.location.hash = 'welcome';
-    const welcomeLink = document.querySelector('.enlaceMenu[data-view="welcome"]');
-    if (welcomeLink) {
-        welcomeLink.click();
-    } else {
-        const tempLink = document.createElement('a');
-        tempLink.className = 'enlaceMenu';
-        tempLink.dataset.view = 'welcome';
-        document.body.appendChild(tempLink);
-        tempLink.click();
-        document.body.removeChild(tempLink);
-    }
-  });
+   // Login simulation
+   form.addEventListener('submit', (e) => {
+     e.preventDefault();
+     if (/[^0-9]/.test(passwordInput.value)) {
+       passwordError.textContent = 'solo se permite caracteres numericos';
+       passwordInput.style.borderColor = 'red';
+       return;
+     }
+     // Navigate to welcome screen instead of inicio
+     window.location.hash = 'welcome';
+     const welcomeLink = document.querySelector('.enlaceMenu[data-view="welcome"]');
+     if (welcomeLink) {
+         welcomeLink.click();
+     } else {
+         const tempLink = document.createElement('a');
+         tempLink.className = 'enlaceMenu';
+         tempLink.dataset.view = 'welcome';
+         document.body.appendChild(tempLink);
+         tempLink.click();
+         document.body.removeChild(tempLink);
+     }
+   });
 }
 

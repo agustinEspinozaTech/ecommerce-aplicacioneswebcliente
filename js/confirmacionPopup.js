@@ -8,7 +8,7 @@ export function mostrarConfirmacion(mensaje, onConfirm, onCancel) {
       <div class="popup-contenido">
         <p id="mensajeConfirmacion"></p>
         <div class="botones">
-          <button id="confirmarAccion">Sí</button>
+           <button id="confirmarAccion">Confirmar</button>
           <button id="cancelarAccion">No</button>
         </div>
       </div>
